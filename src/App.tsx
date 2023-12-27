@@ -1,17 +1,14 @@
 import styles from './App.module.scss'
-import useLaunches, { Launch } from './hooks/useLaunches'
+import { Launches } from './components/missions/launches'
+import { Ships } from './components/missions/ships'
+import { Routes, Route, useRoutes } from 'react-router-dom'
 
 function App() {
-  const { isFetching, error, launches } = useLaunches()
-
   return (
-    <div className={styles.App}>
-      {isFetching && <div>Loading...</div>}
-      {error && <div>Fetching failed, please refresh</div>}
-      {launches?.map((launch: Launch) => {
-        return <div key={launch.id}>{launch.mission_name}</div>
-      })}
-    </div>
+    <Routes>
+      <Route path="/" element={<Launches />} />
+      <Route path="/ships" element={<Ships />} />
+    </Routes>
   )
 }
 
