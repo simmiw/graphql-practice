@@ -4,6 +4,7 @@ import {
   getCoreRowModel,
   useReactTable,
 } from '@tanstack/react-table'
+import styles from './table.module.scss'
 
 export default function Table<T>({
   data,
@@ -22,13 +23,17 @@ export default function Table<T>({
   return (
     <div className="p-2">
       <div className="h-2" />
-      <table>
+      <table className={styles.table}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <th key={header.id} colSpan={header.colSpan}>
+                  <th
+                    key={header.id}
+                    colSpan={header.colSpan}
+                    className={styles.th}
+                  >
                     {header.isPlaceholder ? null : (
                       <div>
                         {flexRender(
@@ -43,13 +48,13 @@ export default function Table<T>({
             </tr>
           ))}
         </thead>
-        <tbody>
+        <tbody className={styles.tbody}>
           {table.getRowModel().rows.map((row) => {
             return (
               <tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <td key={cell.id}>
+                    <td key={cell.id} className={styles.td}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

@@ -3,7 +3,7 @@ import { gql, useQuery } from '@apollo/client'
 export type Ship = {
   id: string
   name: string
-  successful_landings: number | null
+  type: string
   weight_kg: number | null
   speed_kn: number | null
   imo: number
@@ -14,7 +14,7 @@ const GET_SHIPS = gql`
     ships {
       id
       name
-      successful_landings
+      type
       weight_kg
       speed_kn
       imo

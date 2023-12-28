@@ -1,11 +1,4 @@
-import {
-  createColumnHelper,
-  getCoreRowModel,
-  getFilteredRowModel,
-  getPaginationRowModel,
-  useReactTable,
-} from '@tanstack/react-table'
-import useShips, { Ship } from '../../hooks/useShips'
+import useShips from '../../hooks/useShips'
 import { useMemo } from 'react'
 import Table from '../common/table'
 
