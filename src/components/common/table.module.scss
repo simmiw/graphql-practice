@@ -16,3 +16,32 @@
   border: 1px solid lightgray;
   padding: 2px 4px;
 }
+
+.mainHeader {
+  height: 20px;
+}
+
+.header2 {
+  display: flex;
+  align-content: space-between;
+  padding: 4px;
+  align-items: center;
+  gap: 0.1%;
+}
+
+.button {
+  border: 1px solid black;
+  border-style: round($number: 2);
+  padding: 1px;
+}
+.span {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+.input {
+  border-style: round($number: 2);
+  padding: 1px;
+  width: 16px;
+  border: 1px solid black;
+}
