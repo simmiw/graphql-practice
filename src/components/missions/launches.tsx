@@ -21,6 +21,7 @@ export const Launches = () => {
     []
   )
   const { isFetching, error, launches } = useLaunches()
+
   return (
     <div>
       {isFetching && <div>Loading...</div>}
