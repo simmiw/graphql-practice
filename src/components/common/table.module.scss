@@ -17,6 +17,14 @@
   padding: 2px 4px;
 }
 
+.container {
+  padding: 2px;
+}
+
+.divider {
+  height: 2px;
+}
+
 .mainHeader {
   height: 20px;
 }
@@ -34,11 +42,13 @@
   border-style: round($number: 2);
   padding: 1px;
 }
+
 .span {
   display: flex;
   align-items: center;
   gap: 1px;
 }
+
 .input {
   border-style: round($number: 2);
   padding: 1px;

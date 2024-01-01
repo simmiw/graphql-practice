@@ -23,8 +23,8 @@ export default function Table<T>({
   })
 
   return (
-    <div className="p-2">
-      <div className="h-2" />
+    <div className={styles.container}>
+      <div className={styles.divider} />
       <table className={styles.table}>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
